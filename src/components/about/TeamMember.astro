@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+export interface Props {
+  name: string;
+  role: string;
+  image: ImageMetadata;
+  alt: string;
+}
+
+const { name, role, image, alt } = Astro.props;
+---
+
+<div class="group">
+  <div class="aspect-[4/5] overflow-hidden rounded mb-4 bg-slate-100 dark:bg-slate-800 relative">
+   <Image
+  src={image}
+  alt={alt}
+  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
+  loading="lazy"
+  decoding="async"
+  layout="constrained"
+  width={400}
+  height={500}
+  format="webp"
+  fit="cover"
+  widths={[200, 300, 400, 600]}
+  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+  quality={75}
+/>
+    <div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+  </div>
+  <h4 class="text-lg font-bold">{name}</h4>
+  <p class="text-xs text-primary font-bold uppercase tracking-widest mt-1">{role}</p>
+</div>

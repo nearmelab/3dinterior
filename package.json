@@ -1,0 +1,23 @@
+{
+  "name": "goend",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@iconify-json/tabler": "^1.2.26",
+    "@tailwindcss/vite": "^4.2.0",
+    "astro": "^5.17.1",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.2.0",
+    "unplugin-auto-import": "^21.0.0",
+    "unplugin-icons": "^23.0.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-basic-ssl": "^2.1.4"
+  }
+}
