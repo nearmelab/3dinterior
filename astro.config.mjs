@@ -9,11 +9,6 @@ import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
-  image: {
-   // Enable responsive images by default
-   responsiveStyles: true,
- },
-
   vite: {
     plugins: [
       basicSsl(),
