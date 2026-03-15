@@ -1,6 +1,6 @@
 {
    "main": "@astrojs/cloudflare/entrypoints/server",
-  "name": "3dinterior",
+  "name": "calcatom-nearmelab-digital",
   "compatibility_date": "2025-09-27",
   "compatibility_flags": [
     "global_fetch_strictly_public",
