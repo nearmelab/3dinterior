@@ -1,6 +1,7 @@
 ---
 import Container from '../shared/Container.astro';
 import Icon from '../shared/Icon.astro';
+import ThemeToggle from '../ThemeToggle.astro';  // adjust path to where you put it
 
 const currentPath = Astro.url.pathname;
 ---
@@ -56,6 +57,7 @@ const currentPath = Astro.url.pathname;
 
     <!-- CTA -->
     <div class="flex items-center gap-4">
+      <ThemeToggle />
       <a 
         href="/contact" 
         class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded text-sm font-bold uppercase tracking-wider transition-all flex items-center gap-2"
