@@ -1,0 +1,33 @@
+---
+// src/components/ThemeToggle.astro
+---
+<button
+        id="theme-toggle"
+        type="button"
+        aria-label="Toggle dark mode"
+        class="p-2 text-slate-600 dark:text-slate-400 hover:text-primary
+         dark:hover:text-primary transition-colors"
+>
+    <!-- Moon: shown in LIGHT mode (click → dark) -->
+    <svg class="block dark:hidden w-5 h-5" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2" stroke-linecap="round"
+         stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+    </svg>
+    <!-- Sun: shown in DARK mode (click → light) -->
+    <svg class="hidden dark:block w-5 h-5" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2" stroke-linecap="round"
+         stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41
+             M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+    </svg>
+</button>
+
+<script>
+  const btn = document.getElementById("theme-toggle");
+  btn?.addEventListener("click", () => {
+    const isDark = document.documentElement.classList.toggle("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  });
+</script>

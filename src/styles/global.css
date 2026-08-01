@@ -18,6 +18,15 @@
 /* Dark mode variant */
 @variant dark (&:where(.dark, .dark *));
 
+@layer base {
+  :root { color-scheme: light; }
+  .dark { color-scheme: dark; }
+
+  html {
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
 /* Base styles */
 @layer base {
   * {
@@ -32,6 +41,8 @@
     @apply bg-background-light text-slate-900 dark:bg-background-dark dark:text-slate-100 transition-colors duration-300 antialiased;
   }
 }
+
+
 
 /* Antialiased text */
 .antialiased {
